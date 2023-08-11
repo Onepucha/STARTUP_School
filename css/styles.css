@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    outline: none;
+}
+html { height: 101%; scroll-behavior: smooth; } /* always display scrollbars */
+body { font-size: 20px; line-height: 26px; font-family: Montserrat, sans-serif; background: #F9F9F9; color: #303031; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+strong { font-weight: bold; }
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    /* отображаем курсор в виде руки при наведении; некоторые
+    считают, что необходимо оставлять стрелочный вид для кнопок */
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+input { vertical-align: middle; }
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea { -webkit-appearance: none; }
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button { cursor: pointer; overflow: visible; -webkit-appearance: button; }
+button[disabled], input[disabled] { cursor: default; }
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="search"] {
+    border: none;
+    font: inherit; color: inherit;
+}
+
+table { border-collapse: collapse; border-spacing: 0; }
+img { border: 0; }
+
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+main {
+    padding: 0 0 60px 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1328px;
+    margin: 40px auto 60px;
+    padding: 9px 56px;
+}
+
+.header__logo {
+    display: flex;
+}
+
+.header__logo a {
+    display: inline-block;
+    width: 251px;
+    height:25px;
+}
+
+.header__nav {
+    display: flex;
+}
+
+.header__nav ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.header__nav ul li a {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: rgba(48, 48, 49, 1);
+    letter-spacing: -0.4px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.header__nav ul li a:hover {
+    color: rgba(48, 48, 49, 0.8);
+}
+
+.header__nav ul li:last-child a {
+    font-weight: 700;
+    color: rgba(113, 168, 148, 1);
+}
+
+.header__nav ul li:last-child a:hover {
+    color: rgba(113, 168, 148, 0.8)
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1328px;
+    margin: 0 auto;
+    padding: 0 56px;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.banner__description {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.banner__description h1 {
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 80px;
+}
+
+.banner__description p {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: -0.48px;
+}
+
+.banner__image img {
+    width: 672px;
+    height: 720px;
+}
+
+.info {
+    margin: 60px 0;
+}
+
+.info h2 {
+    text-align: center;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px;
+    margin: 0 0 24px 0;
+}
+
+.info p {
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: -0.36px;
+}
+
+.info p + p {
+    margin: 26px 0 0 0;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    margin: 60px 0 0 0;
+}
+
+.block-2 .block__performance {
+    flex-direction: row-reverse;
+}
+
+.block__performance {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.block__explanation {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.block__explanation h3 {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px;
+}
+
+.block__explanation p {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: -0.4px;
+}
+
+.block__description {
+    margin: 45px 0 0 0;
+}
+
+.block__description p {
+    font-size: 24px;
+    font-style: normal;
+    line-height: 36px;
+    letter-spacing: -0.48px;
+}
+
+.block__description p + p {
+    margin: 26px 0 0 0;
+}
+
+.submit-form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    padding: 30px;
+    background: #71A894;
+    margin: 60px 0 0 0;
+}
+
+.submit-form h2 {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.submit-form form {
+    width: 100%;
+}
+
+.submit-form__inputs {
+    width: 100%;
+    display: flex;
+    gap: 28px;
+    margin: 30px 0;
+}
+
+.submit-form__name,
+.submit-form__email {
+    position: relative;
+    width: 100%;
+}
+
+.submit-form input,
+.submit-form input::placeholder {
+    color: #303031;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+}
+
+.submit-form input {
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    background: #FFF;
+    padding: 20px 23px;
+}
+
+button {
+    display: flex;
+    width: 100%;
+    padding: 20px 24px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    border-radius: 8px;
+    background: rgba(245, 198, 79, 1);
+    color: #FFFFFF;
+}
+
+button:hover {
+    background: rgba(245, 198, 79, 0.8);
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
