@@ -91,12 +91,16 @@ class Explosion {
 }
 
 window.onload = () => {
+
+
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
     const getYVelocity = () => {
         let yVel = Math.random() * (canvas.height / -80 - 10);
         if (yVel > -12 && yVel < -16) {
+
+
             yVel = Math.random() * -6 - 12;
             return yVel;
         } else {
