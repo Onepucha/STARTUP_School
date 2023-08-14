@@ -99,15 +99,12 @@ window.onload = () => {
     const getYVelocity = () => {
         let yVel = Math.random() * (canvas.height / -80 - 10);
         if (yVel > -12 && yVel < -16) {
-
-
             yVel = Math.random() * -6 - 12;
             return yVel;
         } else {
             return yVel;
         }
     }
-
     const startTheShow = () => {
         ctx.fillStyle= 'rgba(0,0,0,0)';
         ctx.fillRect(0,0,canvas.width,canvas.height);
